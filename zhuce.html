@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 	<link rel="stylesheet" href="css/bootstrap.css"> -->
+	<link rel="stylesheet" href="css/zhuce_denglu.css">
+	<link rel="stylesheet" href="css/wei.css">
+</head>
+<body>
+	<!-- 头 -->
+	<div class="z_tou1">
+		<div class="z_tou2">
+			<img style="width:200px;height:90px;float:left;" src="imgs/touwei/logo.png">
+			<p class="z_p1">欢迎注册</p>
+			<a class="z_a1" href="denglu.html">请登录</a>
+			<p class="z_p2">已有账号?</p>
+		</div>
+	</div>
+	<!-- 	身体 -->
+	<form id="z_app" class="z_d1" method="post" action="data/01-register.php" onsubmit="return check()">
+		<div>
+			<input id="uname" name="uname" onblur="checkUname()" style="margin-top:50px;" class="z_i1" type="tel" placeholder="手机号" v-model="z_uname">
+			<span id="s-uname" class="z_app_s3"></span>
+			<span :class="z_unameClassObj" class=" z_app_s1">{{z_unameMsg}}</span>
+			<br>
+			<input name="upwd" id="upwd" onblur="checkUpwd()" class="z_i1" type="password" placeholder="设置密码" v-model="z_upwd">
+			<span id="s-upwd" class="z_app_s4"></span>
+			<span :class="z_upwdClassObj" class=" z_app_s2">{{z_upwdMsg}}</span>
+			<br>
+			<input name="cpwd" id="cpwd" onblur="checkCpwd()" class="z_i1" type="password" placeholder="确认密码">
+			<span id="s-cpwd" class="z_app_s5"></span>
+		</div>
+		<!-- 	 分割线 -->
+		<div class="z_i1_d1">
+			<div class="z_i1_d2">
+				<input type="checkbox" v-model="isAgree"> 点击注册，表示你同意明谷
+				<a href="javascript:void(0)" onclick="document.getElementById('z_my_1').style.display='block';document.getElementById('z_my_2').style.display='block'"
+				    class="z_i1_a">《服务协议》</a>
+				<div id="z_my_1" class="z_white_content">
+					<div style="width:100%;height:40px;background:#eee">
+						<span class="z_my_s1">用户服务协议</span>
+						<a class="z_my_a" href="javascript:void(0)" onclick="document.getElementById('z_my_1').style.display='none';document.getElementById('z_my_2').style.display='none'">X</a>
+					</div>
+					<div class="z_my_1_1">
+						<p class="z_my_1_1_p">
+							<b>明谷商城用户服务协议</b>
+						</p>
+						<p class="z_my_1_1_p1">客户在接受商品订购与送货的同时，有义务遵守以下交易条款。您在欧普商城下订单之前或接受欧普商城送货之前，请您仔细阅读以下条款：</p>
+						<p class="z_my_1_1_p1">一、本站的各项电子服务的所有权和运作权归本站。本站提供的服务将完全按照其发布的服务条款和操作规则严格执行。用户必须完全同意所有服务条款并完成注册程序，才能成为本站的正式用户。用户确认：本协议条款是处理双方权利义务的当然约定依据，除非违反国家强制性法律，否则始终有效。在下订单的同时，您也同时承认了您拥有购买这些产品的权利能力和行为能力，并且将您对您在订单中提供的所有信息的真实性负责。</p>
+						<p class="z_my_1_1_p1">二、本站将尽最大努力保证您所购商品与网站上公布的价格一致，但价目表和声明并不构成要约。 商品的价格都包含了增值税。如果发生了意外情况，在确认了您的订单后，由于供应商提价，税额变化引起的价格变化，或是由于网站的错误等造成商品价格变化，您有权取消您的订单，并希望您能及时通过电子邮件或电话通知本站客户服务部。
+							由于市场变化及各种以合理商业努力难以控制的因素的影响，本站无法承诺用户通过提交订单所希望购买的商品都会有货，用户订购的商品如果发生缺货，用户和本站皆有权取消该订单。同时，本站保留对产品订购数量的限制权。
+						</p>
+						<p class="z_my_1_1_p1">三、本站将可能不定期的修改本用户协议的有关条款，一旦条款及服务内容产生变动，本站将会在重要页面上提示修改内容。您应经常访问本页面了解这些内容，一旦接受本条款，即意味着您已经同时详细阅读并接受了服务条款的变动。 如果不同意本站对条款内容所做的修改，用户可以主动取消获得的网络服务。
+						</p>
+						<p class="z_my_1_1_p1">四、用户个人对网络服务的使用承担风险。除非另有明确的书面说明，本站及其所包含的其他方式通过本站提供给您的全部信息、内容、商品（包括软件）和服务，是在“现状”和“现存”的基础上提供的。除非另有明确的书面说明，我们不对本网站的运营及包含在本网站上的信息、内容、商品（包括软件）或服务作任何形式的、明示或默示的声明或担保，且不会承诺其提供给用户的全部信息或发出的电子邮件没有病毒或其他有害成分。在适用法律所允许的最大限度内，我们不承诺所有明示或默示的担保，包括但不限于对适销性和满足特定目的的默示担保。您明确同意自担风险使用本网站。</p>
+					</div>
+				</div>
+				<div id="z_my_2" class="z_black_overlay"></div>
+			</div>
+		</div>
+		<input v-if="isAgree" type="submit" class="z_d1_b" value="同意协议注册">
+	</form>
+	<!-- 	尾部 -->
+	<div class="bwei1">
+		<div class="bwei2">
+			<div class="bd1">
+				<img src="imgs/touwei/footer1.png">
+				<div class="bd1_1">
+					<span class="bs1 bs1_1">正品保障</span>
+				</div>
+				<div class="bd1_2">
+					<span class="bs2 bs2_1">放心安全支付</span>
+				</div>
+			</div>
+			<div class="bd1">
+				<img src="imgs/touwei/footer2.png">
+				<div class="bd1_1">
+					<span class="bs1 bs1_2">7天退货</span>
+				</div>
+				<div class="bd1_2">
+					<span class="bs2 bs2_2">15天超长换货保障</span>
+				</div>
+			</div>
+			<div class="bd1">
+				<img src="imgs/touwei/footer3.png">
+				<div class="bd1_1">
+					<span class="bs1 bs1_3">高效物流</span>
+				</div>
+				<div class="bd1_2">
+					<span class="bs2 bs2_3">全国主要城市3天到达</span>
+				</div>
+			</div>
+			<div class="bd1">
+				<img src="imgs/touwei/footer4.png">
+				<div class="bd1_1">
+					<span class="bs1 bs1_4">298家售后网点</span>
+				</div>
+				<div class="bd1_2">
+					<span class="bs2 bs2_4">298家售后网点遍布全国</span>
+				</div>
+			</div>
+			<div class="bclear"></div>
+			<div id="bid_d1"></div>
+			<div class="bzhon">
+				<dl>
+					<dt>购物指南</dt>
+					<dd>
+						<a href="#">购物流程</a>
+					</dd>
+					<dd>
+						<a href="#">支付方式</a>
+					</dd>
+					<dd>
+						<a href="#">物流配送</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>技术支持</dt>
+					<dd>
+						<a href="#">产品手册</a>
+					</dd>
+					<dd>
+						<a href="#">软件下载</a>
+					</dd>
+					<dd>
+						<a href="#">灯具知识</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>关于朵唯</dt>
+					<dd>
+						<a href="#">发展历程</a>
+					</dd>
+					<dd>
+						<a href="#">企业文化</a>
+					</dd>
+					<dd>
+						<a href="#">公司荣誉</a>
+					</dd>
+					<dd>
+						<a href="#">联系我们</a>
+					</dd>
+					<dd>
+						<a href="#">合作伙伴</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>售后服务</dt>
+					<dd>
+						<a href="#">三包服务</a>
+					</dd>
+					<dd>
+						<a href="#">退换货说明</a>
+					</dd>
+					<dd>
+						<a href="#">寄修规则</a>
+					</dd>
+					<dd>
+						<a href="#">售后网点</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>关于我们</dt>
+					<dd>
+						<a href="#">新浪微博</a>
+					</dd>
+					<dd>
+						<a id="bzb" href="#">微信公众号
+							<div id="bzb_1" style="display:none;width:130px;height:130px;">
+								<img width="100%" height="100%" src="imgs/touwei/ewm.jpg">
+							</div>
+						</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="bzhon2">
+				<div>
+					<img class="bzhon2_i1" src="imgs/touwei/footer-phone.png">
+					<p class="bzhon2_p1">176-7034-7724</p>
+					<p class="bzhon2_p2">周一至周日 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9:00-18:00</p>
+				</div>
+				<div>
+					<a href="#">
+						<img style="margin-top:30px;" src="imgs/touwei/footer-qq.png">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="bxia">
+			<ul class="bu1">
+				<li class="bl1">
+					<a href="">关于我们</a>
+				</li>
+				<li class="bl1">&nbsp;|&nbsp;</li>
+				<li class="bl1">
+					<a href="">联系我们</a>
+				</li>
+				<li class="bl1">&nbsp;|&nbsp;</li>
+				<li class="bl1">
+					<a href="">诚聘英才</a>
+				</li>
+				<li class="bl1">&nbsp;|&nbsp;</li>
+				<li class="bl1">
+					<a href="">在线客服</a>
+				</li>
+			</ul>
+			<p class="bp1">粤ICP备01010101号-1 Copyright © 2009-现在 明谷官方商城 明谷官网 明谷唯一官方购物网站 版权所有</p>
+		</div>
+		
+	</div>
+<!--  	<script src="js/jquery-1.11.3.js"></script> -->
+	<!-- <script src="js/twc_yinru.js"></script>  -->
+	<script src="js/wei.js"></script>
+	<script src="js/common.js"></script>	
+	<script src="js/vue.js"></script>
+	<script src="js/zhuce.js"></script>
+
+</body>
+
+</html>

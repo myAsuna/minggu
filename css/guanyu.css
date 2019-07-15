@@ -1,0 +1,52 @@
+*{margin:0;padding:0;text-decoration:none;}
+.g_tou{height:360px;background:url(/minggu/imgs/guanyu/banner02.jpg) no-repeat center center;}
+.g_tou1{padding:24px 0;font-size:12px;color:#666;}
+.g_tou2{width:1200px;margin:auto;}
+.g_tou2 a{color:#666;transition:all 0.4s;}
+.g_tou2 a:hover{color:#0046aa;}
+.g_tou3{width:1200px;margin:auto;font-size:24px;padding-bottom:30px;color:#333;}
+/*多页面标签*/
+.g_tabs{width:1200px;height:490px;margin:auto;}
+#g_tab li{
+	float: left; list-style: none;
+}
+#g_tab li a{
+  display:inline-block;
+  text-decoration:none;
+  width: 300px; height: 70px;
+	line-height: 70px;
+	text-align: center;
+  color:#000;
+}
+#g_container{
+	position: relative;
+}
+#g_container>div{
+	width: 1200px;
+	height: 400px;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	display:none;
+}
+#g_container>div.g_show{ display:block }
+#g_tab li:first-child,#g_content1{
+	background-color: #FAFAFA;
+}
+#g_tab li:first-child+li,#g_content2{
+	background-color: #FAFAFA;
+}
+#g_tab li:first-child+li+li,#g_content3{
+	background-color: #FAFAFA;
+}
+#g_tab li:first-child+li+li+li,#g_content4{
+	background-color: #FAFAFA;
+}
+#g_tab li a:hover{background-color:#0046aa;color:#fff;}
+.g_d1{float:left;width:36.666%;overflow:hidden;}
+.g_d1 img{transition:all 0.5s;}
+.g_d1 img:hover{transform:scale(1.1);}
+.g_d2{width:63.3333%;position:absolute;right:0;top:0;height:100%}
+.g_d3{width:89%;margin:auto;}
+.g_d3_1{width:100%;height:30px;}
+.g_yaoguan{background-color:#0046aa;}

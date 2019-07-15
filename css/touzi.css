@@ -1,0 +1,9 @@
+*{margin:0;padding:0;text-decoration:none;}
+.t_tou{height:360px;background:url(/minggu/imgs/touzi/touzi.jpg) no-repeat center center;}
+.t_tou1{padding:24px 0;font-size:12px;color:#666;}
+.t_tou2{width:1200px;margin:auto;}
+.t_tou2 a{color:#666;transition:all 0.4s;}
+.t_tou2 a:hover{color:#0046aa;}
+.t_d1{width:1200px;margin:auto;}
+.t_d1 h2{font-size:24px;padding-bottom:30px;color:#333;font-weight:normal;}
+.t_d1 h3{font-size:24px;margin-bottom:20px;color:#333;font-weight:normal;}
